@@ -64,7 +64,9 @@ select {
   }
 }
 
-/* AFTER RESET */
+/* --- AFTER RESET --- */
+
+/* Top items */
 body {
   font-family: "Roboto", sans-serif;
 }
@@ -83,9 +85,9 @@ header h3 {
   flex-direction: row;
   justify-content: space-between;
   align-items: center;
-  width: 90%;
+  width: 93%;
   height: 3.8rem;
-  background-color: aquamarine;
+  /* background-color: aquamarine; */
   margin-left: 5%;
 }
 
@@ -93,6 +95,27 @@ header h3 {
   .mobile-menu {
     visibility: hidden;
   }
+  .img-responsive {
+    height: 320px;
+    width: auto;
+  }
+}
+
+@media (max-width: 767px) {
+  .bottom-header {
+    display: none;
+  }
+  .img-responsive {
+    height: 240px;
+    width: auto;
+  }
+  header .bottom-header {
+    display: none;
+  }
+}
+
+.img-responsive {
+  object-fit: cover;
 }
 
 .home h3 {
@@ -103,20 +126,14 @@ header h3 {
   display: flex;
   flex-direction: row;
   justify-content: center;
-  gap: 2rem;
+  gap: 2.3rem;
   list-style: none;
   align-items: center;
 
   width: 100%;
-  height: 3.8rem;
+  height: 4.5rem;
   font-size: 0.8rem;
-  background-color: burlywood;
-}
-
-@media (max-width: 767px) {
-  .bottom-header {
-    display: none;
-  }
+  /* background-color: lavender; */
 }
 
 .hamburger {
@@ -140,4 +157,60 @@ header h3 {
   a {
     color: grey;
   }
+}
+/* Mid items */
+.shop-btn {
+  cursor: pointer;
+  background-color: white;
+  border: 2px solid black;
+  font-size: small;
+  width: 11rem;
+  height: 2.5rem;
+  margin: 0.6rem auto 2rem auto;
+}
+
+.items {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  font-size: large;
+  font-weight: 100;
+}
+
+.item-3-4 {
+  display: flex;
+  flex-direction: row;
+  max-width: 1350px;
+  justify-content: center;
+}
+.item-1,
+.item-2,
+.item-3,
+.item-4 {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  p {
+    margin: 1.5rem 1rem 1rem 1rem;
+  }
+}
+/* footer */
+.footer {
+  text-align: center;
+  line-height: 2rem;
+  margin-top: 0.4rem;
+  font-size: small;
+  a {
+    color: lightslategrey;
+  }
+}
+.demo {
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  box-sizing: border-box;
+  background-color: black;
+  color: white;
+  width: 7.5rem;
+  padding-top: 0.2rem;
 }
