@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="/vite.svg" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"
+    />
+    <link rel="stylesheet" href="style.css" />
+    <title>Polymer Shop</title>
+  </head>
+  <body>
+    <!-- top element -->
+    <div class="top-container">
+      <i class="fa-solid fa-bars fa-lg mobile-only"
+        ><input type="radio" name="mobile-nav-bar" id="mobile-nav-bar"
+      /></i>
+      <!-- heading/title -->
+      <a href="#" class="title"><strong>SHOP</strong></a>
+      <!-- shop-icon -->
+      <a href="#">
+        <i class="fa-solid fa-cart-shopping fa-1g cart-icon"></i>
+      </a>
+    </div>
+    <!-- top element over, nav-bar for wide screen begins -->
+    <div class="website-only">
+      <nav>
+        <a href="#" class="">Men's Outerwear</a>
+        <a href="#" class="">Ladies Outerwear</a>
+        <a href="#" class="">Men's T-Shirts</a>
+        <a href="#" class="">Ladies T-Shirts</a>
+      </nav>
+    </div>
+    <!-- web-navigation elements over, item display begins -->
+    <section class="items">
+      <div class="item-1">
+        <a href="#">
+          <img alt="mens-outerwear" src="./public/images/mens_outerwear.jpg" />
+        </a>
+        <p>Men's Outerwear</p>
+        <a href="#"><button class="shop-btn">SHOP NOW</button></a>
+      </div>
+      <div class="item-2">
+        <a href="#">
+          <img
+            alt="ladies-outerwear"
+            src="./public/images/ladies_outerwear.jpg"
+          />
+        </a>
+        <p>Ladies Outerwear</p>
+        <a href="#"><button class="shop-btn">SHOP NOW</button></a>
+      </div>
+    </section>
+    <section class="item-3-4">
+      <div class="item-3">
+        <a href="#">
+          <img alt="mens-tshirts" src="./public/images/mens_tshirts.jpg" />
+        </a>
+        <p>Ladies Outerwear</p>
+        <a href="#"><button class="shop-btn">SHOP NOW</button></a>
+      </div>
+      <div class="item4">
+        <a href="#">
+          <img alt="ladies-tshirts" src="./public/images/ladies_tshirts.jpg" />
+        </a>
+        <p>Ladies Outerwear</p>
+        <a href="#"><button class="shop-btn">SHOP NOW</button></a>
+      </div>
+    </section>
+    <script type="module" src="/main.js"></script>
+  </body>
+  <footer class="footer">
+    <p class="made-by">Made by Polymer</p>
+    <p class="demo">DEMO ONLY</p>
+  </footer>
+</html>
