@@ -209,24 +209,29 @@ header h4 {
   border-bottom: 2px solid black;
 }
 
-.item-display {
-  display: flex;
-  /* justify-content: center;
-  align-items: center; */
-}
-
-/* item display */
-
-.row-wise {
-  flex: 1 1 calc(33.33% - 10px); /* 3 items per row */
-}
-@media (max-width: 767px) {
-  .item-display .row-wise {
-    flex: 1 1 calc(50% - 10px); /* 2 items per row */
-  }
-}
 .item-name {
   margin-top: 0.5vw;
   font-size: 0.78rem;
   font-weight: bold;
+}
+.item-amount {
+  color: grey;
+  font-size: smaller;
+}
+
+.main {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: repeat(3, 400px);
+  place-content: center;
+  place-items: center;
+  gap: 2rem 2rem;
+  justify-items: center;
+}
+.item {
+  text-align: center;
+}
+.item-image {
+  width: 300px;
+  height: 300px;
 }

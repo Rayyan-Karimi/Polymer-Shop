@@ -12,7 +12,7 @@
     <link rel="stylesheet" href="styles.css" />
   </head>
   <body>
-    <header class="header-container">
+    <header>
       <nav>
         <!-- Top navs - web + mobile -->
         <div class="top-header">
@@ -45,47 +45,254 @@
     </header>
     <!-- Main cart items display -->
     <main class="main">
-      <div class="heading">
-        <h4>Your cart</h4>
-        <span>(1 item)</span>
-      </div>
-      <!-- Items component -->
-      <div class="items-container">
-        <div class="induvidual-items">
-          <!-- web component -->
-          <div class="item-on-web">
-            <div class="left-area">
-              <a href="individual-item.html"
-                ><img
-                  src="https://shop.polymer-project.org/esm-bundled/data/images/10-14157B.jpg"
-                  alt="Green Flex Zip Hoodie"
-              /></a>
-              <p class="item-description">Green Flex Zip Hoodie</p>
-            </div>
-            <div class="right-area">
-              <label for="quantity" class="grey">Qty:</label>
-              <select name="quantity" id="quantity">
-                <option value="1">1</option>
-                <option value="2">2</option>
-                <option value="3">3</option>
-                <option value="4">4</option>
-              </select>
-              <p class="grey">Size: M</p>
-              <p class="grey">&dollar;45.65</p>
-            </div>
+      <section class="heading">
+        <p>Your Cart</p>
+        <div class="grey smaller">(3 items)</div>
+      </section>
+      <section class="cart-items">
+        <div class="cart-item">
+          <div class="image-container">
+            <a href="individual-item.html">
+              <img
+                src="https://shop.polymer-project.org/esm-bundled/data/images/10-14157B.jpg"
+                alt="Green Flex Fleece Zip Hoodie"
+              />
+            </a>
           </div>
-          <!-- mobile component -->
-          <div class="item-on-mobile"></div>
+          <a href="individual-item.html">
+            <div class="image-description smaller">
+              Green Flex Fleece Zip Hoodie
+            </div>
+          </a>
+          <div class="cart-dropdown">
+            <label for="quantity" class="grey smaller">Qty:</label>
+            <select name="quantity" id="quantity">
+              <option value="1">1</option>
+              <option value="2">2</option>
+              <option value="3">3</option>
+              <option value="4">4</option>
+            </select>
+          </div>
+          <div class="pricing grey smaller">&dollar;45.65</div>
+          <i class="fa fa-solid fa-xmark grey"></i>
         </div>
-      </div>
-      <!-- Total -->
-      <div class="total">
-        <h5>Total:</h5>
-        <span>&dollar;45.65</span>
-      </div>
-      <!-- checkout btn -->
-      <button class="checkout-btn">Checkout</button>
+        <div class="cart-item">
+          <div class="image-container">
+            <a href="individual-item.html">
+              <img
+                src="https://shop.polymer-project.org/esm-bundled/data/images/10-25058B.jpg"
+                alt="Ladies Colorblock Wind Jacket"
+              />
+            </a>
+          </div>
+          <a href="individual-item.html">
+            <div class="image-description smaller">
+              Ladies Colorblock Wind Jacket
+            </div>
+          </a>
+          <div class="cart-dropdown">
+            <label for="quantity" class="grey smaller">Qty:</label>
+            <select name="quantity" id="quantity">
+              <option value="1">1</option>
+              <option value="2">2</option>
+              <option value="3">3</option>
+              <option value="4">4</option>
+            </select>
+          </div>
+          <div class="pricing grey smaller">&dollar;45.65</div>
+          <i class="fa fa-solid fa-xmark grey"></i>
+        </div>
+        <div class="cart-item">
+          <div class="image-container">
+            <a href="individual-item.html">
+              <img
+                src="https://shop.polymer-project.org/esm-bundled/data/images/10-13239B.jpg"
+                alt="Android Adult Superhero T-Shirt"
+              />
+            </a>
+          </div>
+          <a href="individual-item.html">
+            <div class="image-description smaller">
+              Android Adult Superhero T-Shirt
+            </div>
+          </a>
+          <div class="cart-dropdown">
+            <label for="quantity" class="grey smaller">Qty:</label>
+            <select name="quantity" id="quantity">
+              <option value="1">1</option>
+              <option value="2">2</option>
+              <option value="3">3</option>
+              <option value="4">4</option>
+            </select>
+          </div>
+          <div class="pricing grey smaller">&dollar;45.65</div>
+          <i class="fa fa-solid fa-xmark grey"></i>
+        </div>
+        <div class="cart-item">
+          <div class="image-container">
+            <a href="individual-item.html">
+              <img
+                src="https://shop.polymer-project.org/esm-bundled/data/images/10-14157B.jpg"
+                alt="Green Flex Fleece Zip Hoodie"
+              />
+            </a>
+          </div>
+          <a href="individual-item.html">
+            <div class="image-description smaller">
+              Green Flex Fleece Zip Hoodie
+            </div>
+          </a>
+          <div class="cart-dropdown">
+            <label for="quantity" class="grey smaller">Qty:</label>
+            <select name="quantity" id="quantity">
+              <option value="1">1</option>
+              <option value="2">2</option>
+              <option value="3">3</option>
+              <option value="4">4</option>
+            </select>
+          </div>
+          <div class="pricing grey smaller">&dollar;45.65</div>
+          <i class="fa fa-solid fa-xmark grey"></i>
+        </div>
+        <div class="cart-item">
+          <div class="image-container">
+            <a href="individual-item.html">
+              <img
+                src="https://shop.polymer-project.org/esm-bundled/data/images/10-25058B.jpg"
+                alt="Ladies Colorblock Wind Jacket"
+              />
+            </a>
+          </div>
+          <a href="individual-item.html">
+            <div class="image-description smaller">
+              Ladies Colorblock Wind Jacket
+            </div>
+          </a>
+          <div class="cart-dropdown">
+            <label for="quantity" class="grey smaller">Qty:</label>
+            <select name="quantity" id="quantity">
+              <option value="1">1</option>
+              <option value="2">2</option>
+              <option value="3">3</option>
+              <option value="4">4</option>
+            </select>
+          </div>
+          <div class="pricing grey smaller">&dollar;45.65</div>
+          <i class="fa fa-solid fa-xmark grey"></i>
+        </div>
+        <div class="cart-item">
+          <div class="image-container">
+            <a href="individual-item.html">
+              <img
+                src="https://shop.polymer-project.org/esm-bundled/data/images/10-13239B.jpg"
+                alt="Android Adult Superhero T-Shirt"
+              />
+            </a>
+          </div>
+          <a href="individual-item.html">
+            <div class="image-description smaller">
+              Android Adult Superhero T-Shirt
+            </div>
+          </a>
+          <div class="cart-dropdown">
+            <label for="quantity" class="grey smaller">Qty:</label>
+            <select name="quantity" id="quantity">
+              <option value="1">1</option>
+              <option value="2">2</option>
+              <option value="3">3</option>
+              <option value="4">4</option>
+            </select>
+          </div>
+          <div class="pricing grey smaller">&dollar;45.65</div>
+          <i class="fa fa-solid fa-xmark grey"></i>
+        </div>
+        <div class="cart-item">
+          <div class="image-container">
+            <a href="individual-item.html">
+              <img
+                src="https://shop.polymer-project.org/esm-bundled/data/images/10-14157B.jpg"
+                alt="Green Flex Fleece Zip Hoodie"
+              />
+            </a>
+          </div>
+          <a href="individual-item.html">
+            <div class="image-description smaller">
+              Green Flex Fleece Zip Hoodie
+            </div>
+          </a>
+          <div class="cart-dropdown">
+            <label for="quantity" class="grey smaller">Qty:</label>
+            <select name="quantity" id="quantity">
+              <option value="1">1</option>
+              <option value="2">2</option>
+              <option value="3">3</option>
+              <option value="4">4</option>
+            </select>
+          </div>
+          <div class="pricing grey smaller">&dollar;45.65</div>
+          <i class="fa fa-solid fa-xmark grey"></i>
+        </div>
+        <div class="cart-item">
+          <div class="image-container">
+            <a href="individual-item.html">
+              <img
+                src="https://shop.polymer-project.org/esm-bundled/data/images/10-25058B.jpg"
+                alt="Ladies Colorblock Wind Jacket"
+              />
+            </a>
+          </div>
+          <a href="individual-item.html">
+            <div class="image-description smaller">
+              Ladies Colorblock Wind Jacket
+            </div>
+          </a>
+          <div class="cart-dropdown">
+            <label for="quantity" class="grey smaller">Qty:</label>
+            <select name="quantity" id="quantity">
+              <option value="1">1</option>
+              <option value="2">2</option>
+              <option value="3">3</option>
+              <option value="4">4</option>
+            </select>
+          </div>
+          <div class="pricing grey smaller">&dollar;45.65</div>
+          <i class="fa fa-solid fa-xmark grey"></i>
+        </div>
+        <div class="cart-item">
+          <div class="image-container">
+            <a href="individual-item.html">
+              <img
+                src="https://shop.polymer-project.org/esm-bundled/data/images/10-13239B.jpg"
+                alt="Android Adult Superhero T-Shirt"
+              />
+            </a>
+          </div>
+          <a href="individual-item.html">
+            <div class="image-description smaller">
+              Android Adult Superhero T-Shirt
+            </div>
+          </a>
+          <div class="cart-dropdown">
+            <label for="quantity" class="grey smaller">Qty:</label>
+            <select name="quantity" id="quantity">
+              <option value="1">1</option>
+              <option value="2">2</option>
+              <option value="3">3</option>
+              <option value="4">4</option>
+            </select>
+          </div>
+          <div class="pricing grey smaller">&dollar;45.65</div>
+          <i class="fa fa-solid fa-xmark grey"></i>
+        </div>
+      </section>
+
+      <section class="checkout-box">
+        <span><strong> Total: </strong></span>
+        <span> <strong> &dollar;255.75 </strong> </span>
+        <a href="checkout.html" class="checkout-button">CHECKOUT</a>
+      </section>
     </main>
+
     <footer class="footer">
       <p>Made by RAYYAN</p>
       <button class="demo">DEMO ONLY</button>

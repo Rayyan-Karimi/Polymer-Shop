@@ -96,6 +96,59 @@ select {
   }
 }
 
+/* Main */
+
+.heading {
+  margin-top: 4rem;
+  text-align: center;
+  margin-bottom: 2.5rem;
+}
+.grey {
+  color: grey;
+}
+.smaller {
+  font-size: small;
+}
+.cart-items {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.cart-item {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  max-width: 947px;
+  text-align: center;
+  background-color: lightyellow;
+  align-items: center;
+  margin-bottom: 1.5rem;
+}
+.image-container {
+  width: 75px;
+  height: auto;
+}
+
+/* CHECKOUT */
+.checkout-box {
+  display: flex;
+  margin-right: 10%;
+  column-gap: 2rem;
+  justify-content: flex-end;
+  align-items: center;
+  span {font-size: smaller;}
+}
+.checkout-button {
+  margin-left: 2rem;
+  box-sizing: border-box;
+  border: 2px solid black;
+  padding: 0.4rem 2.2rem;
+  color: rgba(0, 0, 0, 0.8);
+  font-size: 15px;
+}
+
 /* footer */
 .footer {
   text-align: center;
