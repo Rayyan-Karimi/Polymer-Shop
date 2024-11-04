@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Cart</title>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"
+    />
+    <link rel="stylesheet" href="cart.css" />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <header class="header-container">
+      <nav>
+        <!-- Top navs - web + mobile -->
+        <div class="top-header">
+          <!-- left menu -->
+          <div class="mobile-menu">
+            <i class="fa-solid fa-bars fa-lg"></i>
+          </div>
+          <!-- center nav -->
+          <div class="home">
+            <a href="index.html"><h4>SHOP</h4></a>
+          </div>
+          <!-- right cart -->
+          <div class="cart-icon">
+            <a href="cart.html">
+              <i class="fa-solid fa-cart fa-cart-shopping fa-lg"></i>
+            </a>
+          </div>
+        </div>
+
+        <!-- Menu - Mobile only -->
+        <div class="hamburger">
+          <ol>
+            <li><a href="mens_outerwear.html">Men's Outerwear</a></li>
+            <li><a href="ladies_outerwear.html">Ladies Outerwear</a></li>
+            <li><a href="mens_tshirts.html">Men's T-shirts</a></li>
+            <li><a href="ladies_tshirts.html">Ladies T-shirts</a></li>
+          </ol>
+        </div>
+      </nav>
+    </header>
+    <!-- Main cart items display -->
+    <main class="main">
+      <div class="heading">
+        <h4>Your cart</h4>
+        <span>(1 item)</span>
+      </div>
+      <!-- Items component -->
+      <div class="items-container">
+        <div class="induvidual-items">
+          <!-- web component -->
+          <div class="item-on-web">
+            <div class="left-area">
+              <a href="individual-item.html"
+                ><img
+                  src="https://shop.polymer-project.org/esm-bundled/data/images/10-14157B.jpg"
+                  alt="Green Flex Zip Hoodie"
+              /></a>
+              <p class="item-description">Green Flex Zip Hoodie</p>
+            </div>
+            <div class="right-area">
+              <label for="quantity" class="grey">Qty:</label>
+              <select name="quantity" id="quantity">
+                <option value="1">1</option>
+                <option value="2">2</option>
+                <option value="3">3</option>
+                <option value="4">4</option>
+              </select>
+              <p class="grey">Size: M</p>
+              <p class="grey">&dollar;45.65</p>
+            </div>
+          </div>
+          <!-- mobile component -->
+          <div class="item-on-mobile"></div>
+        </div>
+      </div>
+      <!-- Total -->
+      <div class="total">
+        <h5>Total:</h5>
+        <span>&dollar;45.65</span>
+      </div>
+      <!-- checkout btn -->
+      <button class="checkout-btn">Checkout</button>
+    </main>
+    <footer class="footer">
+      <p>Made by RAYYAN</p>
+      <button class="footer-button">DEMO ONLY</button>
+    </footer>
+  </body>
+</html>
