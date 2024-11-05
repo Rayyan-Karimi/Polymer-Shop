@@ -17,9 +17,10 @@
         <!-- Top navs - web + mobile -->
         <div class="top-header">
           <!-- left menu -->
-          <div class="mobile-menu">
+          <div class="mobile-menu" onclick="toggleMenu()">
             <i class="fa-solid fa-bars fa-lg"></i>
           </div>
+          <div class="overlay" id="overlay" onclick="toggleMenu()"></div>
           <!-- center nav -->
           <div class="home">
             <a href="index.html"><h4>SHOP</h4></a>
@@ -33,7 +34,7 @@
         </div>
 
         <!-- Menu - Mobile only -->
-        <div class="hamburger">
+        <div class="hamburger" id="hamburger">
           <ol>
             <li><a href="mens_outerwear.html">Men's Outerwear</a></li>
             <li><a href="ladies_outerwear.html">Ladies Outerwear</a></li>
@@ -298,4 +299,14 @@
       <button class="demo">DEMO ONLY</button>
     </footer>
   </body>
+  <!-- Scripts -->
+
+  <script>
+    function toggleMenu() {
+      const hamburger = document.getElementById("hamburger");
+      const overlay = document.getElementById("overlay");
+      hamburger.classList.toggle("active");
+      overlay.classList.toggle("active");
+    }
+  </script>
 </html>

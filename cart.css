@@ -66,7 +66,7 @@ select {
 
 /* --- AFTER RESET --- */
 
-
+/* 
 .hamburger {
   position: fixed;
   left: -500px;
@@ -83,7 +83,7 @@ select {
   .hamburger {
     left: 0;
   }
-}
+} */
 .hamburger ol {
   margin-top: 2rem;
   margin-left: 0rem;
@@ -168,4 +168,40 @@ select {
   color: white;
   width: 7.5rem;
   padding-top: 0.2rem;
+}
+/* mobile menu */
+.mobile-menu {
+  cursor: pointer;
+  /* z-index: 1002;
+  position: relative; */
+}
+.hamburger {
+  position: fixed;
+  left: 0;
+  top: 0;
+  height: 100%;
+  width: 255px;
+  display: flex;
+  flex-direction: column;
+  transform: translateX(-100%);
+  transition: transform 0.3s ease;
+  z-index: 1001;
+  background-color: #fff;
+}
+/* overlay */
+.overlay {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0,0,0,0.5);
+  z-index: 1000;
+}
+.hamburger.active {
+  transform: translateX(0);
+}
+.overlay.active {
+  display: block;
 }
