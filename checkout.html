@@ -10,6 +10,7 @@
     <link rel="stylesheet" href="checkout.css" />
     <title>Checkout Page</title>
   </head>
+
   <body>
     <div class="content-container">
       <nav>
@@ -18,9 +19,9 @@
         </div>
         <div class="overlay" id="overlay" onclick="toggleMenu()"></div>
         <div>
-          <a href="index.html" class="no-text-decoration home-btn"
-            ><h4>SHOP</h4></a
-          >
+          <a href="index.html" class="no-text-decoration home-btn">
+            <h4>SHOP</h4>
+          </a>
         </div>
         <div class="cart-icon">
           <a href="cart.html" class="no-text-decoration"
@@ -53,55 +54,193 @@
         </div>
       </nav>
     </div>
-
-    <div class="subsection">
+    <form
+      class="subsection"
+      method="post"
+      action="data/sample_success_response.json"
+    >
       <div class="header">
-        <p>Your Cart</p>
-        <span class="grey">(2 items)</span>
+        <p>Checkout</p>
+        <span class="grey"
+          >Shop is a demo app - form data will not be sent</span
+        >
       </div>
 
-      <div class="items">
-        <div class="item">
-          <a href="individual-item.html">
-            <img
-              src="https://shop.polymer-project.org/esm-bundled/data/images/10-14157B.jpg"
-              alt="Green Flex Zip Hoodie"
-              class="cart-images"
+      <div class="checkout-info">
+        <div class="div-left">
+          <p>Account Information</p>
+          <input type="email" name="email" id="email" placeholder="Email" />
+          <input
+            type="number"
+            name="ph-no"
+            id="ph-no"
+            placeholder="Phone Number"
+          />
+          <p>Shipping Address</p>
+          <input
+            type="text"
+            minlength="6"
+            name="address"
+            id="address"
+            placeholder="Address"
+          />
+          <input
+            type="text"
+            minlength="3"
+            name="city"
+            id="city"
+            placeholder="City"
+          />
+          <div class="two-columns">
+            <input
+              type="text"
+              minlength="3"
+              name="province"
+              id="province"
+              placeholder="State/Province"
             />
-          </a>
-          <div class="product-details">
-            <div class="row top-row">
-              <p class="product-name">Green Flex Fleece Zip Hoodie</p>
-              <button id="delete" class="delete-btn">
-                <i class="fa-solid fa-xmark fa-lg grey delete-btn"></i>
-              </button>
-            </div>
-            <div class="row bottom-row">
-              <span>Qty:</span>
+            <input
+              type="number"
+              minlength="6"
+              name="postal-code"
+              id="postal-code"
+              placeholder="Zip/Postal Code"
+            />
+          </div>
+          <label for="country">Country</label>
+          <div class="select-wrapper">
+            <select name="country" id="country">
+              <option value="Canada">United States</option>
+              <option value="Canada">Canada</option>
+            </select>
+          </div>
+          <p>Billing Address</p>
+          <input
+            type="checkbox"
+            name="billing-checkbox"
+            id="billing-checkbox"
+          /><span>Use different billing address</span>
+          <div class="hidden">
+            <input
+              type="text"
+              name="address"
+              id="address-billing"
+              placeholder="Address"
+            />
+            <input
+              type="text"
+              name="address"
+              id="address-billing"
+              placeholder="Address"
+            />
+            <div class="two-columns">
+              <input
+                type="text"
+                minlength="3"
+                name="province"
+                id="province"
+                placeholder="State/Province"
+              />
+              <input
+                type="number"
+                minlength="6"
+                name="postal-code"
+                id="postal-code"
+                placeholder="Zip/Postal Code"
+              />
+              <label for="country">Country</label>
               <div class="select-wrapper">
-                <select>
-                  <option value="1">1</option>
-                  <option value="2">2</option>
+                <select name="billing-country" id="billing-country">
+                  <option value="United States">United States</option>
+                  <option value="Canada">Canada</option>
                 </select>
               </div>
-              <span>Size:</span> M
-              <p class="price">$20.00</p>
             </div>
           </div>
         </div>
+        <div class="div-right">
+          <p>Payment Method</p>
+          <input
+            type="text"
+            minlength="5"
+            name="cardholder-name"
+            id="cardholder-name"
+            placeholder="Cardholder Name"
+          />
+          <input
+            type="number"
+            minlength="16"
+            maxlength="16"
+            name="card-number"
+            id="card-number"
+            placeholder="Card Number"
+          />
+        </div>
+        <p class="light">Expiry</p>
+        <div class="three-columns">
+          <div class="select-wrapper">
+            <select name="month" id="month">
+              <option value="january" selected>January</option>
+              <option value="february">February</option>
+              <option value="march">March</option>
+              <option value="april">April</option>
+              <option value="may">May</option>
+              <option value="june">June</option>
+              <option value="july">July</option>
+              <option value="august">August</option>
+              <option value="september">September</option>
+              <option value="october">October</option>
+              <option value="november">November</option>
+              <option value="december">December</option>
+            </select>
+          </div>
+          <div class="select-wrapper">
+            <select name="year" id="year">
+              <option value="2024" selected>2024</option>
+              <option value="2025">2025</option>
+              <option value="2026">2026</option>
+              <option value="2027">2027</option>
+              <option value="2028">2028</option>
+              <option value="2029">2029</option>
+              <option value="2030">2030</option>
+              <option value="2031">2031</option>
+              <option value="2032">203</option>
+              <option value="2033">2033</option>
+            </select>
+          </div>
+          <input
+            type="number"
+            minlength="3"
+            maxlength="3"
+            name="cvv"
+            id="cvv"
+            placeholder="CVV"
+          />
+          <input
+            type="number"
+            minlength="6"
+            name="postal-code"
+            id="postal-code"
+            placeholder="Zip/Postal Code"
+          />
+        </div>
+        <div><p>Order Summary</p></div>
+        <div class="items">
+          <p class="smaller">Men's tech Shell Full-Zip</p>
+          <span>&dollar;50.20</span>
+        </div>
+        <div class="total">
+          <p class="smaller">Total</p>
+          <span>&dollar;50.20</span>
+        </div>
       </div>
 
-      <div class="checkout-box">
-        <div class="total">
-          Total : <span class="subtotal">&dollar;45.65</span>
-        </div>
-          <button class="button-responsive">
-            <a href="checkout.html" class="no-text-decoration checkout-btn"
-              >CHECKOUT</a
-            >
-          </button>
-      </div>
-    </div>
+      <button class="button-responsive">
+        <a href="checkout.html" class="no-text-decoration checkout-btn"
+          >PLACE ORDER</a
+        >
+      </button>
+    </form>
   </body>
   <footer class="footer">
     <a href="#made-by-me">Made by RAYYAN</a>
