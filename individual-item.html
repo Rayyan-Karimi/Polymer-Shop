@@ -13,119 +13,98 @@
   </head>
   <body>
     <!-- Header -->
-    <header class="header-container">
-      <nav>
-        <!-- Top navs - web + mobile -->
-        <div class="top-header">
-          <!-- left menu -->
-          <!-- @TODO: -->
-          <a href="mens_outerwear.html">
-            <i class="fa-solid fa-arrow-left fa-lg"></i>
+    <nav>
+      <!-- Top navs - web + mobile -->
+      <div class="top-header">
+        <!-- left menu -->
+        <a href="mens_outerwear.html">
+          <i class="fa-solid fa-arrow-left fa-lg"></i>
+        </a>
+        <!-- center nav -->
+        <div class="home">
+          <a href="index.html"><h4>SHOP</h4></a>
+        </div>
+        <!-- right cart -->
+        <div class="cart-icon">
+          <a href="cart.html">
+            <i class="fa-solid fa-cart fa-cart-shopping fa-lg"></i>
           </a>
-          <!-- center nav -->
-          <div class="home">
-            <a href="index.html"><h4>SHOP</h4></a>
-          </div>
-          <!-- right cart -->
-          <div class="cart-icon">
-            <a href="cart.html">
-              <i class="fa-solid fa-cart fa-cart-shopping fa-lg"></i>
-            </a>
-          </div>
         </div>
-        <!-- Bottom navs - website only -->
-        <ol class="bottom-header">
-          <li>
-            <a href="mens_outerwear.html" class="active">Men's Outerwear</a>
-          </li>
-          <li><a href="ladies_outerwear.html">Ladies Outerwear</a></li>
-          <li><a href="mens_tshirts.html">Men's T-shirts</a></li>
-          <li><a href="ladies_tshirts.html">Ladies T-shirts</a></li>
-        </ol>
-        <!-- Menu - Mobile only -->
-        <div class="hamburger">
-          <ol>
-            <li><a href="mens_outerwear.html">Men's Outerwear</a></li>
-            <li><a href="ladies_outerwear.html">Ladies Outerwear</a></li>
-            <li><a href="mens_tshirts.html">Men's T-shirts</a></li>
-            <li><a href="ladies_tshirts.html">Ladies T-shirts</a></li>
-          </ol>
-        </div>
-      </nav>
-    </header>
-    <!-- Main items display -->
-    <!-- FIXME: -->
-    <main class="main-container">
-      <div class="image-container">
+      </div>
+      <!-- Bottom navs - website only -->
+      <ol class="bottom-header">
+        <li>
+          <a href="mens_outerwear.html" class="active">Men's Outerwear</a>
+        </li>
+        <li><a href="ladies_outerwear.html">Ladies Outerwear</a></li>
+        <li><a href="mens_tshirts.html">Men's T-shirts</a></li>
+        <li><a href="ladies_tshirts.html">Ladies T-shirts</a></li>
+      </ol>
+    </nav>
+
+    <!-- New product section -->
+    <div class="product-section">
+      <div class="product-image">
         <img
           src="https://shop.polymer-project.org/esm-bundled/data/images/10-15068A.jpg"
-          alt="Image - Mens' Tech Shell Full Zip"
-          class="single-item-image"
+          alt="product Image"
         />
       </div>
-      <div class="product-details">
-        <h2 class="product-heading">Men's Tech Shell Full-Zip</h2>
-        <div class="product-price">$50.20</div>
-        <br />
+      <div class="product-info">
+        <p class="item-name">Item Name</p>
+        <p class="item-price">$50.00</p>
         <hr />
-
-        <div class="product-size">
-          <br />
-          <label for="size-label">Size</label>
-          <select name="size" id="size-label">
-            <option value="XS">XS</option>
-            <option value="S">S</option>
-            <option value="M" selected>M</option>
-            <option value="L">L</option>
-            <option value="XL">XL</option>
-          </select>
+        <div class="size-container">
+          <label for="size">Size:</label>
+          <div class="select-wrapper">
+            <select id="size" name="size">
+              <option value="S">S</option>
+              <option value="M">M</option>
+              <option value="L">L</option>
+            </select>
+          </div>
         </div>
-        <br />
-        <hr />
-        <br />
-
-        <div class="product-quantity">
-          <label for="quantity-label">Quantity</label>
-          <select name="quantity" id="quantity-label">
-            <option value="1">1</option>
-            <option value="2">2</option>
-            <option value="3">3</option>
-            <option value="4">4</option>
-            <option value="5">5</option>
-          </select>
+        <hr>
+        <div class="quantity-container">
+          <label for="quantity">Quantity:</label>
+          <div class="select-wrapper">
+            <select id="quantity" name="quantity">
+              <option value="1">1</option>
+              <option value="2">2</option>
+              <option value="3">3</option>
+            </select>
+          </div>
         </div>
-        <br />
-        <hr />
-        <br />
-        <div class="product-description">
-          <h4>Description</h4>
-          <br />
+        <hr>
+        <p class="description-label"><strong>Description</strong></p>
+        <p class="description-text">
           A versatile full-zip that you can wear all day long and even to the
           gym. This technical shell features moisture-wicking fabric, added
           stretch and a hidden pocket for your smartphone or media player.
-          <br />
-          <p>Features:</p>
-          <br />
-          <ul>
-            <li>100% polyester.</li>
-            <li>Smooth, technical front with textured mesh back.</li>
-            <li>Drawstring bottom for adjustable fit.</li>
-            <li>Raglan sleeves.</li>
-            <li>
-              Available in forest green with the white Google logo embroidered
-              at left chest.
-            </li>
-          </ul>
-        </div>
-        <button class="shop-btn">ADD TO CART</button>
+        </p>
+        <p>Features:</p>
+        <ul class="description-list">
+          <li>100% polyester.</li>
+          <li>Smooth, technical front with textured mesh back.</li>
+          <li>Drawstring bottom for adjustable fit.</li>
+          <li>Raglan sleeves.</li>
+          <li>
+            Available in forest green with the white Google logo embroidered
+            at left chest.
+          </li>
+        </ul>
+          <a href="#checkout" class="no-text-decoration checkout-btn"
+            >ADD TO CART</a
+          >
       </div>
-    </main>
+    </div>
+
     <!-- Footer -->
     <footer class="footer">
       <a href="#made-by-me">Made by RAYYAN</a>
       <div class="demo">DEMO ONLY</div>
     </footer>
     <!-- Scripts -->
-    <!-- <script type="module" src="/main.js"></script> -->
+    <!-- <script></script> -->
   </body>
 </html>

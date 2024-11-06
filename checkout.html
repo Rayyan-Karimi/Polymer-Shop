@@ -1,1 +1,118 @@
-checkout page 
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"
+    />
+    <link rel="stylesheet" href="checkout.css" />
+    <title>Checkout Page</title>
+  </head>
+  <body>
+    <div class="content-container">
+      <nav>
+        <div class="left-sidebar" onclick="toggleMenu()">
+          <i class="fa-solid fa-bars fa-lg"></i>
+        </div>
+        <div class="overlay" id="overlay" onclick="toggleMenu()"></div>
+        <div>
+          <a href="index.html" class="no-text-decoration home-btn"
+            ><h4>SHOP</h4></a
+          >
+        </div>
+        <div class="cart-icon">
+          <a href="cart.html" class="no-text-decoration"
+            ><i class="fa-solid fa-cart-shopping fa-lg"></i
+          ></a>
+        </div>
+        <div class="hamburger" id="hamburger">
+          <ol>
+            <li>
+              <a href="mens_outerwear.html" class="no-text-decoration"
+                >Men's Outerwear</a
+              >
+            </li>
+            <li>
+              <a href="ladies_outerwear.html" class="no-text-decoration"
+                >Ladies Outerwear</a
+              >
+            </li>
+            <li>
+              <a href="mens_tshirts.html" class="no-text-decoration"
+                >Men's T-shirts</a
+              >
+            </li>
+            <li>
+              <a href="ladies_tshirts.html" class="no-text-decoration"
+                >Ladies T-shirts</a
+              >
+            </li>
+          </ol>
+        </div>
+      </nav>
+    </div>
+
+    <div class="subsection">
+      <div class="header">
+        <p>Your Cart</p>
+        <span class="grey">(2 items)</span>
+      </div>
+
+      <div class="items">
+        <div class="item">
+          <a href="individual-item.html">
+            <img
+              src="https://shop.polymer-project.org/esm-bundled/data/images/10-14157B.jpg"
+              alt="Green Flex Zip Hoodie"
+              class="cart-images"
+            />
+          </a>
+          <div class="product-details">
+            <div class="row top-row">
+              <p class="product-name">Green Flex Fleece Zip Hoodie</p>
+              <button id="delete" class="delete-btn">
+                <i class="fa-solid fa-xmark fa-lg grey delete-btn"></i>
+              </button>
+            </div>
+            <div class="row bottom-row">
+              <span>Qty:</span>
+              <div class="select-wrapper">
+                <select>
+                  <option value="1">1</option>
+                  <option value="2">2</option>
+                </select>
+              </div>
+              <span>Size:</span> M
+              <p class="price">$20.00</p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="checkout-box">
+        <div class="total">
+          Total : <span class="subtotal">&dollar;45.65</span>
+        </div>
+          <button class="button-responsive">
+            <a href="checkout.html" class="no-text-decoration checkout-btn"
+              >CHECKOUT</a
+            >
+          </button>
+      </div>
+    </div>
+  </body>
+  <footer class="footer">
+    <a href="#made-by-me">Made by RAYYAN</a>
+    <div class="demo">DEMO ONLY</div>
+  </footer>
+  <script>
+    function toggleMenu() {
+      const hamburger = document.getElementById("hamburger");
+      const overlay = document.getElementById("overlay");
+      hamburger.classList.toggle("active");
+      overlay.classList.toggle("active");
+    }
+  </script>
+</html>

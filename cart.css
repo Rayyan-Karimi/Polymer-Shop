@@ -1,180 +1,217 @@
-/* Box sizing rules */
-*,
-*::before,
-*::after {
-  box-sizing: border-box;
-}
-
-/* Remove default margin */
-* {
-  margin: 0;
-}
-
-/* Remove list styles on ul, ol elements with a list role, which suggests default styling will be removed */
-ul[role="list"],
-ol[role="list"] {
-  list-style: none;
-}
-
-/* Set core root defaults */
-html:focus-within {
-  scroll-behavior: smooth;
-}
-
-/* Set core body defaults */
 body {
-  min-height: 100vh;
-  text-rendering: optimizeSpeed;
-  line-height: 1.5;
+  font-family: "Roboto";
 }
 
-/* A elements that don't have a class get default styles */
-a:not([class]) {
-  text-decoration-skip-ink: auto;
+.no-text-decoration {
+  text-decoration: none;
+  color: black;
 }
 
-/* Make images easier to work with */
-img,
-picture {
-  max-width: 100%;
-  display: block;
-}
-
-/* Inherit fonts for inputs and buttons */
-input,
-button,
-textarea,
-select {
-  font: inherit;
-}
-
-/* Remove all animations, transitions and smooth scroll for people that prefer not to see them */
-@media (prefers-reduced-motion: reduce) {
-  html:focus-within {
-    scroll-behavior: auto;
-  }
-
-  *,
-  *::before,
-  *::after {
-    animation-duration: 0.01ms !important;
-    animation-iteration-count: 1 !important;
-    transition-duration: 0.01ms !important;
-    scroll-behavior: auto !important;
-  }
-}
-
-/* --- AFTER RESET --- */
-
-/* 
-.hamburger {
-  position: fixed;
-  left: -500px;
-  top: 0;
-  height: 100%;
-  width: 255px;
-  display: flex;
-  flex-direction: column;
-  z-index: 10;
-  background-color: white;
-  transition: all 0.3s ease-in-out;
-}
-@media screen and (max-width: 767px) {
-  .hamburger {
-    left: 0;
-  }
-} */
-.hamburger ol {
-  margin-top: 2rem;
-  margin-left: 0rem;
-}
-.hamburger ol li {
-  list-style: none;
-  margin-bottom: 1rem;
-  a {
-    color: grey;
-  }
-}
-
-/* Main */
-
-.heading {
-  margin-top: 4rem;
-  text-align: center;
-  margin-bottom: 2.5rem;
-}
 .grey {
   color: grey;
 }
-.smaller {
-  font-size: small;
-}
-.cart-items {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-}
-.cart-item {
-  display: flex;
-  flex-direction: row;
-  flex-wrap: wrap;
-  justify-content: space-between;
-  max-width: 947px;
-  text-align: center;
-  background-color: lightyellow;
-  align-items: center;
-  margin-bottom: 1.5rem;
-}
-.image-container {
-  width: 75px;
-  height: auto;
+
+.home-btn {
+  font-size: large;
+  font-weight: 200;
+  letter-spacing: 0.2rem;
 }
 
-/* CHECKOUT */
-.checkout-box {
-  display: flex;
-  margin-right: 10%;
-  column-gap: 2rem;
-  justify-content: flex-end;
-  align-items: center;
-  span {font-size: smaller;}
-}
-.checkout-button {
-  margin-left: 2rem;
-  box-sizing: border-box;
-  border: 2px solid black;
-  padding: 0.4rem 2.2rem;
-  color: rgba(0, 0, 0, 0.8);
-  font-size: 15px;
-}
-
-/* footer */
-.footer {
+.header {
   text-align: center;
-  line-height: 2rem;
-  margin-top: 0.4rem;
-  font-size: small;
-  a {
-    color: lightslategrey;
+  margin-bottom: 0.7rem;
+  p {
+    margin-top: 0rem;
+    margin-bottom: 0.2rem;
+    font-weight: lighter;
+  }
+  span {
+    font-size: small;
   }
 }
-.demo {
+
+nav {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  width: 90%;
+  padding: 0% 5%;
+}
+
+/* Items */
+.items {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.item {
+  display: flex;
+  align-items: center;
+  padding: 10px;
+}
+
+.product-image {
+  width: 72px;
+  height: 72px;
+  margin-right: 15px;
+}
+
+.product-details {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+}
+
+.row {
+  display: flex;
+  align-items: center;
+}
+
+.top-row {
+  justify-content: space-between;
+}
+
+.bottom-row {
+  justify-content: flex-end;
+  gap: 2rem;
+  margin-left: auto;
+  color: grey;
+  font-size: small;
+}
+
+.bottom-row select,
+.bottom-row span,
+.price {
+  color: inherit;
+  font-size: inherit;
+  border: none;
+  background: none;
+}
+
+.select-wrapper {
+  position: relative;
+  width: calc(100% - 20px); /* Adjust width */
+}
+
+.select-wrapper select {
+  font-size: smaller;
+  appearance: none;
+  padding-right: 1.5rem;
+  width: 100%;
+  border: none;
+  background: none;
+  color: inherit;
+}
+
+/* Custom arrow */
+.select-wrapper::after {
+  content: "▼";
   position: absolute;
-  left: 50%;
-  transform: translateX(-50%);
-  box-sizing: border-box;
-  background-color: black;
-  color: white;
-  width: 7.5rem;
-  padding-top: 0.2rem;
+  right: 0.5rem;
+  top: 50%;
+  transform: translateY(-50%);
+  pointer-events: none;
+  color: grey;
 }
-/* mobile menu */
-.mobile-menu {
+
+.product-name {
+  font-size: 15px;
+}
+.price {
+  margin-left: auto;
+}
+
+.cart-images {
+  width: 72px;
+  height: 72px;
+}
+
+.total {
+  display: flex;
+  justify-content: flex-end;
+  column-gap: 2rem;
+  margin-inline: 2rem;
+  font-weight: bold;
+}
+
+@media (min-width: 768px) {
+  .checkout-box {
+    margin: 0 1rem 0 10rem;
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+  }
+  .total{
+    margin-right: 10rem;
+  }
+  .button-responsive {
+    transform: translateX(-50%);
+    background-color: #fff;
+    color: #000;
+    border: 2px solid black;
+    padding: 0.6rem 2rem;
+    cursor: pointer;
+    font-size: medium;
+  }
+  .footer {
+    text-align: center;
+    line-height: 2rem;
+    margin-top: 0.4rem;
+    font-size: small;
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    a {
+      color: lightslategrey;
+    }
+  }
+  .demo {
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: black;
+    color: white;
+    width: 7.5rem;
+    padding-top: 0.2rem;
+  }
+  .left-sidebar {
+    visibility: hidden;
+  }
+}
+
+@media screen and (max-width: 767px) {
+  .button-responsive {
+    border: none;
+    background-color: hsl(232, 67%, 18%);
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    left: 0;
+    height: 4rem;
+  }
+
+  .checkout-btn {
+    color: #fff;
+    font-size: 0.95rem;
+  }
+
+  .footer {
+    display: none;
+  }
+}
+
+.delete-btn {
+  border: none;
+  background-color: #fff;
+}
+
+.left-sidebar {
   cursor: pointer;
-  /* z-index: 1002;
-  position: relative; */
 }
+
 .hamburger {
   position: fixed;
   left: 0;
@@ -188,7 +225,7 @@ select {
   z-index: 1001;
   background-color: #fff;
 }
-/* overlay */
+
 .overlay {
   display: none;
   position: fixed;
@@ -196,12 +233,35 @@ select {
   left: 0;
   width: 100%;
   height: 100%;
-  background-color: rgba(0,0,0,0.5);
+  background-color: rgba(0, 0, 0, 0.5);
   z-index: 1000;
 }
+
 .hamburger.active {
   transform: translateX(0);
 }
+
 .overlay.active {
   display: block;
+}
+
+.hamburger ol {
+  margin-top: 2rem;
+  margin-left: 0rem;
+}
+
+.hamburger ol li {
+  list-style: none;
+  margin-bottom: 1rem;
+  a {
+    color: grey;
+  }
+}
+body {
+  max-width: 100%;
+  margin: 0;
+}
+.subsection {
+  margin: 0 auto;
+  max-width: 1000px;
 }

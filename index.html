@@ -114,12 +114,28 @@
     </footer>
     <!-- Scripts -->
     <script>
-      function toggleMenu()  {
-        const hamburger = document.getElementById('hamburger')
-        const overlay = document.getElementById('overlay')
-        hamburger.classList.toggle('active')
-        overlay.classList.toggle('active')
+      // hamburger
+      function toggleMenu() {
+        const hamburger = document.getElementById("hamburger");
+        const overlay = document.getElementById("overlay");
+        hamburger.classList.toggle("active");
+        overlay.classList.toggle("active");
       }
+      // scroll up
+      // let lastScrollPosition = 0;
+      // const nav = document.querySelector("nav");
+      // const initialNavOffset = nav.offsetTop;
+
+      // window.addEventListener("scroll", () => {
+      //   const currentScrollPosition = window.pageYOffset;
+      //   if (currentScrollPosition < lastScrollPosition) {
+      //     // scrolling up
+      //     nav.classList.add("visible");
+      //   } else {
+      //     nav.classList.add("visible");
+      //   }
+      //   lastScrollPosition = currentScrollPosition;
+      // });
     </script>
   </body>
 </html>

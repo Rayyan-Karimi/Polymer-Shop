@@ -7,10 +7,11 @@
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"
     />
-    <link rel="stylesheet" href="cart.css" />
-    <title>Cart Page</title>
+    <link rel="stylesheet" href="success.css" />
+    <title>Checkout Page</title>
   </head>
   <body>
+    <!--  -->
     <div class="content-container">
       <nav>
         <div class="left-sidebar" onclick="toggleMenu()">
@@ -53,53 +54,20 @@
         </div>
       </nav>
     </div>
-
+    <!--  -->
     <div class="subsection">
+      <!-- your cart -->
       <div class="header">
-        <p>Your Cart</p>
-        <span class="grey">(2 items)</span>
-      </div>
-
-      <div class="items">
-        <div class="item">
-          <a href="individual-item.html">
-            <img
-              src="https://shop.polymer-project.org/esm-bundled/data/images/10-14157B.jpg"
-              alt="Green Flex Zip Hoodie"
-              class="cart-images"
-            />
-          </a>
-          <div class="product-details">
-            <div class="row top-row">
-              <p class="product-name">Green Flex Fleece Zip Hoodie</p>
-              <button id="delete" class="delete-btn">
-                <i class="fa-solid fa-xmark fa-lg grey delete-btn"></i>
-              </button>
-            </div>
-            <div class="row bottom-row">
-              <span>Qty:</span>
-              <div class="select-wrapper">
-                <select>
-                  <option value="1">1</option>
-                  <option value="2">2</option>
-                </select>
-              </div>
-              <span>Size:</span> M
-              <p class="price">$20.00</p>
-            </div>
-          </div>
-        </div>
+        <p>Thank you</p>
+        <span>Demo checkout process complete.</span>
       </div>
 
       <div class="checkout-box">
-        <div class="total">
-          Total : <span class="subtotal">&dollar;45.65</span>
-        </div>
-          <button class="button-responsive">
-            <a href="checkout.html" class="no-text-decoration checkout-btn"
-              >CHECKOUT</a
-            >
-          </button>
+        <button class="button-responsive" type="submit">
+          <a href="index.html" class="no-text-decoration checkout-btn"
+            >FINISH</a
+          >
+        </button>
       </div>
     </div>
   </body>
