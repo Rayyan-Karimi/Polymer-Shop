@@ -10,7 +10,7 @@ body {
 
 /* Page specific */
 .subsection {
-  margin: 0 auto;
+  margin: 3.5rem auto;
   max-width: 1000px;
 }
 .checkout-info {
@@ -19,7 +19,7 @@ body {
   flex-wrap: wrap;
   width: 95%;
   /* height: auto; */
-  margin: 0 auto;
+  margin: 0 auto 7rem;
 }
 .div-left,
 .div-right {
@@ -27,13 +27,127 @@ body {
   display: flex;
   flex-direction: column;
 }
-input[type="text"], input[type="number"], input[type="email"], select {
-  /* width: 95%; */
+.two-columns {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  column-gap: 2.5%;
+}
+.three-columns {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  column-gap: 2.5%;
+}
+.billing {
+  display:flex;
+  width:50%;
+  margin: 0 0 0 0.3rem;
+  justify-content: flex-start;
+  column-gap: 2rem;
+}
+/* input #billing-checkbox { border: 5px solid black;} */
+.items , .total, .summary{
+  display: flex;
+  width: 90%;
+  margin: 0 auto;
+  justify-content: space-between;
+}
+.two-columns .input-group {
+  width: 100%;
+}
+.three-columns .input-group {
+  width: 100%;
+  justify-content: space-between;
+}
+.smaller { font-size: small;}
+.summary {
+  font-weight: bold;
+  font-size: 100;
+}
+input[type="text"],
+input[type="number"],
+input[type="email"],
+select {
+  width: 95%;
   padding: 10px;
   margin-bottom: 2rem;
   border: none;
   border-bottom: 1px solid #ccc;
   border-radius: 4px;
+}
+.input-group {
+  position: relative;
+}
+.placeholder {
+  position: absolute;
+  top: 10px;
+  padding: 0 5px;
+  left: 8px;
+  color: #555;
+  transition: 0.3s;
+  pointer-events: none;
+}
+/* input[type="email"]:not(:placeholder-shown) + .placeholder,
+input[type="text"]:not(:placeholder-shown) + .placeholder,
+input[type="number"]:not(:placeholder-shown) + .placeholder {
+  transform: translate(0, -20px) scale(0.95);
+  padding: 0 2px;
+  z-index: 10;
+} */
+input[type="email"]:focus,
+input[type="text"]:focus,
+input[type="number"]:focus {
+  outline: none;
+  border-bottom: 2px solid black;
+}
+
+/* Placeholder label styling update */
+.input-group input:focus + .placeholder,
+.input-group input:not(:placeholder-shown) + .placeholder {
+  transform: translate(0, -20px) scale(0.95);
+  padding: 0 2px;
+  z-index: 10;
+}
+
+/* Red border only when the input is invalid and not empty */
+input:not(:focus):invalid:not(:placeholder-shown),
+input:invalid:not(:placeholder-shown):not(:focus-within) {
+  border-bottom: 2px solid red;
+}
+
+/* Placeholder turns red only when the input is invalid and not empty */
+input:not(:focus):invalid:not(:placeholder-shown) + .placeholder,
+input:invalid:not(:placeholder-shown):not(:focus-within) + .placeholder {
+  color: red;
+}
+
+.errormsg {
+  display: block;
+  visibility: hidden;
+  margin-left: 0;
+  margin-top: 1px;
+  font-size: 0.6rem;
+}
+input:not(:focus):invalid:not(:placeholder-shown) ~ .errormsg,
+input:invalid:not(:placeholder-shown):not(:focus-within) ~ .errormsg {
+  color: red;
+  position: relative;
+  top: -30px;
+  left: 10px;
+  visibility: visible;
+  color: red;
+}  
+
+/* Reset style for valid input */
+input:valid {
+  border-bottom: 2px solid black;
+  background-color: aliceblue;
+}
+
+/* Reset style for valid input */
+input:valid {
+  border-bottom: 2px solid black;
 }
 @media screen and (min-width: 768px) {
   .div-left {
@@ -43,6 +157,11 @@ input[type="text"], input[type="number"], input[type="email"], select {
     width: 48%;
   }
 }
+.theCheckbox { margin: 0 1rem;}
+.hidden {
+  display: none;
+}
+
 .header {
   text-align: center;
   margin-bottom: 0.7rem;
@@ -56,12 +175,19 @@ input[type="text"], input[type="number"], input[type="email"], select {
   }
 }
 
+.select-wrapper  {
+  width: 100%;
+  select { background-color: #fff;}
+}
+
 /* Individual accesories */
 .no-text-decoration {
   text-decoration: none;
   color: black;
 }
-label, .grey, .header p {
+label,
+.grey,
+.header p {
   font-size: 14px;
   color: #333;
 }
@@ -184,4 +310,33 @@ nav {
   font-size: large;
   font-weight: 200;
   letter-spacing: 0.2rem;
+}
+
+/* finaladjustment */
+
+p.heading {
+  font-size: large;
+}
+span.grey { color: grey }
+p{ font-weight: bold;
+font-size: small;}
+@media screen and (min-width: 768px) {
+  div.div-left input, div.div-right input {
+    width: 80%;
+    display: flex;
+    justify-content: center;
+  }
+  .checkout-info {
+    justify-content: center;
+  }
+  p.summary, div.items, div.total {
+    margin: 1rem auto;
+  }
+  button.button-responsive.checkout-btn {
+    position: relative;
+    top: 0;
+    left: 0;
+    width: fit-content;
+    transform: translateX(5%);
+  }
 }

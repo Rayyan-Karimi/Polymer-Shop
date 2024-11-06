@@ -12,55 +12,53 @@
   </head>
 
   <body>
-    <div class="content-container">
-      <nav>
-        <div class="left-sidebar" onclick="toggleMenu()">
-          <i class="fa-solid fa-bars fa-lg"></i>
-        </div>
-        <div class="overlay" id="overlay" onclick="toggleMenu()"></div>
-        <div>
-          <a href="index.html" class="no-text-decoration home-btn">
-            <h4>SHOP</h4>
-          </a>
-        </div>
-        <div class="cart-icon">
-          <a href="cart.html" class="no-text-decoration"
-            ><i class="fa-solid fa-cart-shopping fa-lg"></i
-          ></a>
-        </div>
-        <div class="hamburger" id="hamburger">
-          <ol>
-            <li>
-              <a href="mens_outerwear.html" class="no-text-decoration"
-                >Men's Outerwear</a
-              >
-            </li>
-            <li>
-              <a href="ladies_outerwear.html" class="no-text-decoration"
-                >Ladies Outerwear</a
-              >
-            </li>
-            <li>
-              <a href="mens_tshirts.html" class="no-text-decoration"
-                >Men's T-shirts</a
-              >
-            </li>
-            <li>
-              <a href="ladies_tshirts.html" class="no-text-decoration"
-                >Ladies T-shirts</a
-              >
-            </li>
-          </ol>
-        </div>
-      </nav>
-    </div>
+    <nav>
+      <div class="left-sidebar" onclick="toggleMenu()">
+        <i class="fa-solid fa-bars fa-lg"></i>
+      </div>
+      <div class="overlay" id="overlay" onclick="toggleMenu()"></div>
+      <div>
+        <a href="index.html" class="no-text-decoration home-btn">
+          <h4>SHOP</h4>
+        </a>
+      </div>
+      <div class="cart-icon">
+        <a href="cart.html" class="no-text-decoration"
+          ><i class="fa-solid fa-cart-shopping fa-lg"></i
+        ></a>
+      </div>
+      <div class="hamburger" id="hamburger">
+        <ol>
+          <li>
+            <a href="mens_outerwear.html" class="no-text-decoration"
+              >Men's Outerwear</a
+            >
+          </li>
+          <li>
+            <a href="ladies_outerwear.html" class="no-text-decoration"
+              >Ladies Outerwear</a
+            >
+          </li>
+          <li>
+            <a href="mens_tshirts.html" class="no-text-decoration"
+              >Men's T-shirts</a
+            >
+          </li>
+          <li>
+            <a href="ladies_tshirts.html" class="no-text-decoration"
+              >Ladies T-shirts</a
+            >
+          </li>
+        </ol>
+      </div>
+    </nav>
     <form
       class="subsection"
       method="post"
       action="data/sample_success_response.json"
     >
       <div class="header">
-        <p>Checkout</p>
+        <p class="heading">Checkout</p>
         <span class="grey"
           >Shop is a demo app - form data will not be sent</span
         >
@@ -69,43 +67,80 @@
       <div class="checkout-info">
         <div class="div-left">
           <p>Account Information</p>
-          <input type="email" name="email" id="email" placeholder="Email" />
-          <input
-            type="number"
-            name="ph-no"
-            id="ph-no"
-            placeholder="Phone Number"
-          />
+          <div class="input-group">
+            <input
+              type="email"
+              name="email"
+              id="email"
+              placeholder=""
+              required
+            />
+            <label for="email" class="placeholder">Email</label>
+            <span class="errormsg">Invalid email</span>
+          </div>
+          <div class="input-group">
+            <input
+              type="number"
+              name="ph-no"
+              id="ph-no"
+              placeholder=""
+              required
+            />
+            <label for="ph-no" class="placeholder">Phone Number</label>
+            <span class="errormsg">Invalid Phone Number</span>
+          </div>
           <p>Shipping Address</p>
-          <input
-            type="text"
-            minlength="6"
-            name="address"
-            id="address"
-            placeholder="Address"
-          />
-          <input
-            type="text"
-            minlength="3"
-            name="city"
-            id="city"
-            placeholder="City"
-          />
-          <div class="two-columns">
+          <div class="input-group">
+            <input
+              type="text"
+              minlength="6"
+              name="address"
+              id="address"
+              placeholder=""
+              required
+            />
+            <label for="address" class="placeholder">Address</label>
+            <span class="errormsg">Invalid Address</span>
+          </div>
+          <div class="input-group">
             <input
               type="text"
               minlength="3"
-              name="province"
-              id="province"
-              placeholder="State/Province"
+              name="city"
+              id="city"
+              placeholder=""
+              required
             />
-            <input
-              type="number"
-              minlength="6"
-              name="postal-code"
-              id="postal-code"
-              placeholder="Zip/Postal Code"
-            />
+            <label for="city" class="placeholder">City</label>
+            <span class="errormsg">Invalid City</span>
+          </div>
+          <div class="two-columns">
+            <div class="input-group">
+              <input
+                type="text"
+                minlength="3"
+                name="province"
+                id="province"
+                placeholder=""
+                required
+              />
+              <label for="province" class="placeholder">State/Province</label>
+              <span class="errormsg">Invalid State/Province</span>
+            </div>
+            <div class="input-group">
+              <input
+                type="number"
+                minlength="6"
+                name="postal-code"
+                id="postal-code"
+                placeholder=""
+                required
+              />
+              <label for="postal-code" class="placeholder"
+                >Zip/Postal Code</label
+              >
+              <span class="errormsg">Invalid Zip/Postal Code</span>
+            </div>
           </div>
           <label for="country">Country</label>
           <div class="select-wrapper">
@@ -115,131 +150,166 @@
             </select>
           </div>
           <p>Billing Address</p>
-          <input
-            type="checkbox"
-            name="billing-checkbox"
-            id="billing-checkbox"
-          /><span>Use different billing address</span>
+          <div class="billing">
+            <label for="">
+              <input
+                type="checkbox"
+                name="billing-checkbox"
+                id="billing-checkbox"
+                class="theCheckbox"
+              />Use different billing address
+            </label>
+          </div>
           <div class="hidden">
-            <input
-              type="text"
-              name="address"
-              id="address-billing"
-              placeholder="Address"
-            />
-            <input
-              type="text"
-              name="address"
-              id="address-billing"
-              placeholder="Address"
-            />
-            <div class="two-columns">
+            <div class="input-group">
               <input
                 type="text"
-                minlength="3"
-                name="province"
-                id="province"
-                placeholder="State/Province"
+                name="address"
+                id="address-billing"
+                placeholder=""
+                required
               />
+              <label for="address-billing" class="placeholder">Address</label>
+              <span class="errormsg">Invalid Address</span>
+            </div>
+            <div class="input-group">
               <input
-                type="number"
-                minlength="6"
-                name="postal-code"
-                id="postal-code"
-                placeholder="Zip/Postal Code"
+                type="text"
+                name="address"
+                id="city-billing"
+                placeholder=""
+                required
               />
-              <label for="country">Country</label>
-              <div class="select-wrapper">
-                <select name="billing-country" id="billing-country">
-                  <option value="United States">United States</option>
-                  <option value="Canada">Canada</option>
-                </select>
+              <label for="city-billing" class="placeholder">City</label>
+              <span class="errormsg">Invalid City</span>
+            </div>
+            <div class="two-columns">
+              <div class="input-group">
+                <input
+                  type="text"
+                  minlength="3"
+                  name="province"
+                  id="provinceII"
+                  placeholder=""
+                  required
+                />
+                <label for="provinceII" class="placeholder"
+                  >State/Province</label
+                >
+                <span class="errormsg">Invalid State/Province</span>
               </div>
+              <div class="input-group">
+                <input
+                  type="number"
+                  minlength="6"
+                  name="postal-code"
+                  id="postal-codeII"
+                  placeholder=""
+                  required
+                />
+                <label for="postal-codeII" class="placeholder"
+                  >Zip/Postal Code</label
+                >
+                <span class="errormsg">Invalid Zip/Postal Code</span>
+              </div>
+            </div>
+            <label for="country">Country</label>
+            <div class="select-wrapper">
+              <select name="billing-country" id="billing-country">
+                <option value="United States">United States</option>
+                <option value="Canada">Canada</option>
+              </select>
             </div>
           </div>
         </div>
         <div class="div-right">
-          <p>Payment Method</p>
-          <input
-            type="text"
-            minlength="5"
-            name="cardholder-name"
-            id="cardholder-name"
-            placeholder="Cardholder Name"
-          />
-          <input
-            type="number"
-            minlength="16"
-            maxlength="16"
-            name="card-number"
-            id="card-number"
-            placeholder="Card Number"
-          />
-        </div>
-        <p class="light">Expiry</p>
-        <div class="three-columns">
-          <div class="select-wrapper">
-            <select name="month" id="month">
-              <option value="january" selected>January</option>
-              <option value="february">February</option>
-              <option value="march">March</option>
-              <option value="april">April</option>
-              <option value="may">May</option>
-              <option value="june">June</option>
-              <option value="july">July</option>
-              <option value="august">August</option>
-              <option value="september">September</option>
-              <option value="october">October</option>
-              <option value="november">November</option>
-              <option value="december">December</option>
-            </select>
+          <p class="method">Payment Method</p>
+          <div class="input-group">
+            <input
+              type="text"
+              minlength="5"
+              name="cardholder-name"
+              id="cardholder-name"
+              placeholder=""
+              required
+            />
+            <label for="cardholder-name" class="placeholder"
+              >Cardholder Name</label
+            >
+            <span class="errormsg">Invalid Cardholder Name</span>
           </div>
-          <div class="select-wrapper">
-            <select name="year" id="year">
-              <option value="2024" selected>2024</option>
-              <option value="2025">2025</option>
-              <option value="2026">2026</option>
-              <option value="2027">2027</option>
-              <option value="2028">2028</option>
-              <option value="2029">2029</option>
-              <option value="2030">2030</option>
-              <option value="2031">2031</option>
-              <option value="2032">203</option>
-              <option value="2033">2033</option>
-            </select>
+          <div class="input-group">
+            <input
+              type="number"
+              minlength="16"
+              maxlength="16"
+              name="card-number"
+              id="card-number"
+              placeholder=""
+              required
+            />
+            <label for="card-number" class="placeholder">Card Number</label>
+            <span class="errormsg">Invalid Card Number</span>
           </div>
-          <input
-            type="number"
-            minlength="3"
-            maxlength="3"
-            name="cvv"
-            id="cvv"
-            placeholder="CVV"
-          />
-          <input
-            type="number"
-            minlength="6"
-            name="postal-code"
-            id="postal-code"
-            placeholder="Zip/Postal Code"
-          />
-        </div>
-        <div><p>Order Summary</p></div>
-        <div class="items">
-          <p class="smaller">Men's tech Shell Full-Zip</p>
-          <span>&dollar;50.20</span>
-        </div>
-        <div class="total">
-          <p class="smaller">Total</p>
-          <span>&dollar;50.20</span>
+          <p class="light">Expiry</p>
+          <div class="three-columns">
+            <div class="select-wrapper">
+              <select name="month" id="month">
+                <option value="january" selected>January</option>
+                <option value="february">February</option>
+                <option value="march">March</option>
+                <option value="april">April</option>
+                <option value="may">May</option>
+                <option value="june">June</option>
+                <option value="july">July</option>
+                <option value="august">August</option>
+                <option value="september">September</option>
+                <option value="october">October</option>
+                <option value="november">November</option>
+                <option value="december">December</option>
+              </select>
+            </div>
+            <div class="select-wrapper">
+              <select name="year" id="year">
+                <option value="2024" selected>2024</option>
+                <option value="2025">2025</option>
+                <option value="2026">2026</option>
+                <option value="2027">2027</option>
+                <option value="2028">2028</option>
+                <option value="2029">2029</option>
+                <option value="2030">2030</option>
+                <option value="2031">2031</option>
+                <option value="2032">203</option>
+                <option value="2033">2033</option>
+              </select>
+            </div>
+            <div class="input-group">
+              <input
+                type="number"
+                minlength="3"
+                maxlength="3"
+                name="cvv"
+                id="cvv"
+                placeholder=""
+                required
+              />
+              <label for="cvv" class="placeholder">CVV</label>
+            </div>
+          </div>
+          <div><p class="summary">Order Summary</p></div>
+          <div class="items">
+            <span class="smaller">Men's tech Shell Full-Zip</span>
+            <span class="smaller">&dollar;50.20</span>
+          </div>
+          <div class="total">
+            <span class="smaller">Total</span>
+            <span class="smaller">&dollar;50.20</span>
+          </div>
+          <button class="button-responsive checkout-btn" type="submit">
+            PLACE ORDER
+          </button>
         </div>
       </div>
-
-      <button class="button-responsive">
-        <a href="checkout.html" class="no-text-decoration checkout-btn"
-          >PLACE ORDER</a
-        >
-      </button>
     </form>
   </body>
   <footer class="footer">
@@ -253,5 +323,29 @@
       hamburger.classList.toggle("active");
       overlay.classList.toggle("active");
     }
+
+    // const checked = 1;
+    // const div = document.getElementById('hidden')
+
+    // function toggleBillingAddress() {
+    //   if(checked == 0) {
+    //     div.style.display = 'block';
+    //     checked = 1
+    //   } else {
+    //     div.style.display = 'none';
+    //     checked = 0;
+    //   }
+    // }
+
+    $(function () {
+      $(".theCheckbox").click(function (event) {
+        var x = $(this).is(":checked");
+        if (x == true) {
+          $(this).parents(".div-left").find(".hidden").show();
+        } else {
+          $(this).parents(".div-left").find(".hidden").hide();
+        }
+      });
+    });
   </script>
 </html>
