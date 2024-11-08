@@ -40,7 +40,6 @@ body {
   column-gap: 2.5%;
 }
 
-
 .items,
 .total,
 .summary {
@@ -86,13 +85,27 @@ select {
   transition: 0.3s;
   pointer-events: none;
 }
-/* input[type="email"]:not(:placeholder-shown) + .placeholder,
-input[type="text"]:not(:placeholder-shown) + .placeholder,
-input[type="number"]:not(:placeholder-shown) + .placeholder {
-  transform: translate(0, -20px) scale(0.95);
-  padding: 0 2px;
-  z-index: 10;
+
+/* prevent default validation */
+/* input.invalid,
+select.invalid {
+  border-bottom: 2px solid red; 
+}
+
+.errormsg {
+  display: block;
+  visibility: hidden; 
+  margin-left: 0;
+  margin-top: 1px;
+  font-size: 0.6rem;
+  color: red; 
+}
+
+input.invalid ~ .errormsg,
+select.invalid ~ .errormsg {
+  visibility: visible;
 } */
+
 input[type="email"]:focus,
 input[type="text"]:focus,
 input[type="number"]:focus {
@@ -175,9 +188,9 @@ input:valid {
 }
 
 .billing {
-  display: flex; 
-  align-items: center; 
-  margin-bottom: 1rem; 
+  display: flex;
+  align-items: center;
+  margin-bottom: 1rem;
 }
 
 .billing input[type="checkbox"] {
@@ -187,8 +200,8 @@ input:valid {
 }
 
 .checkbox-label {
-  margin: 0; 
-  font-size: 14px; 
+  margin: 0;
+  font-size: 14px;
 }
 
 .select-wrapper {
@@ -249,7 +262,7 @@ label,
     margin-top: 0.4rem;
     font-size: small;
     position: absolute;
-    bottom: 0;
+    bottom: -0.01;
     left: 50%;
     transform: translateX(-50%);
     a {
@@ -321,8 +334,26 @@ nav {
   flex-direction: row;
   align-items: center;
   justify-content: space-between;
+  width: 100%;
+}
+.top-header {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
   width: 90%;
-  padding: 0% 5%;
+  height: 3.8rem;
+  padding: 0 5%;
+
+  background-color: #fff;
+  /* box-shadow: ; */
+  opacity: 0.8;
+  transition: transform 0.5s ease; /* Add transition for smooth effect */
+  position: relative; /* Make it fixed to the top */
+  top: 0; /* Align it to the top */
+  left: 0; /* Align it to the left */
+  right: 0; /* Align it to the right */
+  z-index: 1000; /* Ensure it stays above other content */
 }
 .home-btn {
   font-size: large;

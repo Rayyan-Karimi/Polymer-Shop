@@ -118,7 +118,7 @@ hr {
 }
 
 /* Adding custom arrow to wrapper */
-.select-wrapper::after { 
+.select-wrapper::after {
   content: "▼"; /* Arrow symbol */
   position: absolute;
   right: 0.5rem;
@@ -160,6 +160,9 @@ hr {
 }
 
 /* Ensure the image and info sections behave correctly */
+.product-image {
+  width: 100%;
+}
 .product-image img {
   width: 100%;
   max-width: 600px;
