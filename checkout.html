@@ -92,7 +92,20 @@
           <p>Shipping Address</p>
           <div class="input-group">
             <input
-              type="text"
+            .billing {
+              display: inline;
+              margin: 0 0 0 0.3rem;
+              column-gap: 2rem;
+            }
+            .theCheckbox {
+              position: relative;
+              margin: auto 0;
+              top: 0;
+              left: 1rem;
+            }
+            .checkbox-label {
+              position: relative;
+            }         type="text"
               minlength="6"
               name="address"
               id="address"
@@ -151,16 +164,18 @@
           </div>
           <p>Billing Address</p>
           <div class="billing">
-            <label for="">
-              <input
-                type="checkbox"
-                name="billing-checkbox"
-                id="billing-checkbox"
-                class="theCheckbox"
-              />Use different billing address
+            <input
+              type="checkbox"
+              name="billing-checkbox"
+              id="billing-checkbox"
+              class="checkbox"
+              onclick="toggle()"
+            />
+            <label class="checkbox-label" for="billing-checkbox">
+              Use different billing address
             </label>
           </div>
-          <div class="hidden">
+          <div class="hidden-items">
             <div class="input-group">
               <input
                 type="text"
@@ -324,28 +339,11 @@
       overlay.classList.toggle("active");
     }
 
-    // const checked = 1;
-    // const div = document.getElementById('hidden')
+    function toggle() {
+      const div = document.querySelector(".hidden-items");
+      div.classList.toggle("active");
+    }
 
-    // function toggleBillingAddress() {
-    //   if(checked == 0) {
-    //     div.style.display = 'block';
-    //     checked = 1
-    //   } else {
-    //     div.style.display = 'none';
-    //     checked = 0;
-    //   }
-    // }
-
-    $(function () {
-      $(".theCheckbox").click(function (event) {
-        var x = $(this).is(":checked");
-        if (x == true) {
-          $(this).parents(".div-left").find(".hidden").show();
-        } else {
-          $(this).parents(".div-left").find(".hidden").hide();
-        }
-      });
-    });
+    Math.c;
   </script>
 </html>

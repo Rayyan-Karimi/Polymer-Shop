@@ -39,15 +39,11 @@ body {
   align-items: center;
   column-gap: 2.5%;
 }
-.billing {
-  display:flex;
-  width:50%;
-  margin: 0 0 0 0.3rem;
-  justify-content: flex-start;
-  column-gap: 2rem;
-}
-/* input #billing-checkbox { border: 5px solid black;} */
-.items , .total, .summary{
+
+
+.items,
+.total,
+.summary {
   display: flex;
   width: 90%;
   margin: 0 auto;
@@ -60,7 +56,9 @@ body {
   width: 100%;
   justify-content: space-between;
 }
-.smaller { font-size: small;}
+.smaller {
+  font-size: small;
+}
 .summary {
   font-weight: bold;
   font-size: 100;
@@ -137,7 +135,7 @@ input:invalid:not(:placeholder-shown):not(:focus-within) ~ .errormsg {
   left: 10px;
   visibility: visible;
   color: red;
-}  
+}
 
 /* Reset style for valid input */
 input:valid {
@@ -157,11 +155,12 @@ input:valid {
     width: 48%;
   }
 }
-.theCheckbox { margin: 0 1rem;}
-.hidden {
+.hidden-items {
   display: none;
 }
-
+.hidden-items.active {
+  display: block;
+}
 .header {
   text-align: center;
   margin-bottom: 0.7rem;
@@ -175,9 +174,28 @@ input:valid {
   }
 }
 
-.select-wrapper  {
+.billing {
+  display: flex; 
+  align-items: center; 
+  margin-bottom: 1rem; 
+}
+
+.billing input[type="checkbox"] {
+  margin-right: 8px;
+  width: 20px;
+  height: 20px;
+}
+
+.checkbox-label {
+  margin: 0; 
+  font-size: 14px; 
+}
+
+.select-wrapper {
   width: 100%;
-  select { background-color: #fff;}
+  select {
+    background-color: #fff;
+  }
 }
 
 /* Individual accesories */
@@ -317,19 +335,28 @@ nav {
 p.heading {
   font-size: large;
 }
-span.grey { color: grey }
-p{ font-weight: bold;
-font-size: small;}
+span.grey {
+  color: grey;
+}
+p {
+  font-weight: bold;
+  font-size: small;
+}
 @media screen and (min-width: 768px) {
-  div.div-left input, div.div-right input {
+  div.div-left input,
+  div.div-right input {
     width: 80%;
     display: flex;
     justify-content: center;
   }
   .checkout-info {
     justify-content: center;
+    /* width: 120%; */
+    /* transform: translateX(-10%); */
   }
-  p.summary, div.items, div.total {
+  p.summary,
+  div.items,
+  div.total {
     margin: 1rem auto;
   }
   button.button-responsive.checkout-btn {
@@ -338,5 +365,12 @@ font-size: small;}
     left: 0;
     width: fit-content;
     transform: translateX(5%);
+  }
+}
+@media screen and (min-width: 1300px) {
+  .checkout-info {
+    justify-content: center;
+    width: 120%;
+    transform: translateX(-10%);
   }
 }
