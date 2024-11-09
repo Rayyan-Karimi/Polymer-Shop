@@ -57,6 +57,7 @@
             src="https://shop.polymer-project.org/esm-bundled/images/ladies_outerwear.jpg"
             alt="Ladies outerwear"
             class="img-responsive"
+            onload="this.classList.add('loaded')"
         /></a>
         <p class="heading">Ladies Outerwear</p>
         <!-- Items -->
@@ -139,6 +140,7 @@
         overlay.classList.toggle("active");
       }
     </script>
+    <script type="module" src="ImageReload.js"></script>
     <script type="module" src="StickyHeader.js"></script>
   </body>
 </html>

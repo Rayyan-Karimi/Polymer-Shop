@@ -125,7 +125,13 @@ header h4 {
 }
 
 .img-responsive {
+  transition: opacity 0.3s ease-in-out;
+  opacity: 0;
   object-fit: cover;
+}
+/* Trigger the transition effect */
+.img-responsive.loaded {
+  opacity: 1;
 }
 
 .home h3 {
